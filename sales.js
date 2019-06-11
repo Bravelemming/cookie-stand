@@ -15,7 +15,7 @@ var pike = {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   },
   getCookiesByHour : function(){
-    return this.makeRandomCustomers() * this.avgCookie;
+    return Math.floor(this.makeRandomCustomers() * this.avgCookie);
   }
 };
 
@@ -30,7 +30,7 @@ var seatac = {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   },
   getCookiesByHour : function(){
-    return this.makeRandomCustomers() * this.avgCookie;
+    return Math.floor(this.makeRandomCustomers() * this.avgCookie);
   }
 };
 var center = {
@@ -44,7 +44,7 @@ var center = {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   },
   getCookiesByHour : function(){
-    return this.makeRandomCustomers() * this.avgCookie;
+    return Math.floor(this.makeRandomCustomers() * this.avgCookie);
   }
 };
 
@@ -59,7 +59,7 @@ var hill = {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   },
   getCookiesByHour : function(){
-    return this.makeRandomCustomers() * this.avgCookie;
+    return Math.floor(this.makeRandomCustomers() * this.avgCookie);
   }
 };
 
@@ -74,7 +74,7 @@ var alki = {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   },
   getCookiesByHour : function(){
-    return this.makeRandomCustomers() * this.avgCookie;
+    return Math.floor(this.makeRandomCustomers() * this.avgCookie);
   }
 };
 
@@ -86,10 +86,11 @@ var operationHours = ['6am', '7am','8am', '9am','10am', '11am','12pm','1pm','2pm
 // Referencing the container for the DOM
 var salesList = document.getElementById('salesByHour');
 
-//output and display
+//output and display -- loop over store, then loop over hour.
 for (var i = 0 ; i < storeArray.length; i++){
   //inline horizontal list of stores
-  //console.log(storeArray[i].location);
+
+  var totalCookiesSoldbyLocation = 0;
 
   // build a new element to put on the page
   var salesli = document.createElement('li');
@@ -102,26 +103,36 @@ for (var i = 0 ; i < storeArray.length; i++){
 
   for (var j = 0 ; j < operationHours.length; j++){
   //blocked vertical list of hours
-    //console.log(storeArray[i].getCookiesByHour());
-    //console.log(operationHours[j]);
 
     // build a new element to put on the page
     var salesP = document.createElement('p');
     var salesSpan = document.createElement('span');
-
-    //TODO: add a var, combine it in the var, then just push it as a single p, and kill the span.
     
     // add classes
     salesP.classList.add('hours');
-    salesSpan.classList.add('cookies');
+    
+    // concat full line expected.
+    var timeAndCookies = operationHours[j] + ': ' + storeArray[i].getCookiesByHour() + ' cookies';
 
     // give some text
-    salesP.textContent = operationHours[j];
-    salesSpan.textContent = storeArray[i].getCookiesByHour();
-
+    salesP.textContent = timeAndCookies;
+    
     // append child to page
     salesList.appendChild(salesP);
-    salesList.appendChild(salesSpan);
-  }
+    
+    // calc total cookies
+    totalCookiesSoldbyLocation += storeArray[i].getCookiesByHour();
+    
+  }// for loop per hour
 
-}
+  // display total and output on the bottom.
+  // build a new element to put on the page
+  var totalCookieP = document.createElement('p');
+  // add classes
+  totalCookieP.classList.add('total');
+  // give text
+  totalCookieP.textContent = 'Total: ' + totalCookiesSoldbyLocation + ' cookies';
+  // append child to page
+  salesList.appendChild(totalCookieP);
+  
+} //for loop per location
