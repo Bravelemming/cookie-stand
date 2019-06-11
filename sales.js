@@ -88,7 +88,7 @@ var salesList = document.getElementById('salesByHour');
 
 //output and display -- loop over store, then loop over hour.
 for (var i = 0 ; i < storeArray.length; i++){
-  //inline horizontal list of stores
+  //inline horizontal list of stores  
 
   var totalCookiesSoldbyLocation = 0;
 
