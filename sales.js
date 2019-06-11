@@ -101,12 +101,12 @@ for (var i = 0 ; i < storeArray.length; i++){
   // append child to page
   salesList.appendChild(salesli);
 
+  //second loop: blocked vertical list of hours
   for (var j = 0 ; j < operationHours.length; j++){
-  //blocked vertical list of hours
 
     // build a new element to put on the page
     var salesP = document.createElement('p');
-    var salesSpan = document.createElement('span');
+    // var salesSpan = document.createElement('span');
     
     // add classes
     salesP.classList.add('hours');
@@ -136,3 +136,60 @@ for (var i = 0 ; i < storeArray.length; i++){
   salesList.appendChild(totalCookieP);
   
 } //for loop per location
+
+
+
+
+//example for constructors
+
+//old way
+/*
+var student = {
+  name: 'steve',
+  hobby: 'interior decorator',
+  skill: 'spelunking',
+
+};
+
+student.gettingHairCut = function() {
+  console.log('buzzzzz');
+};
+*/
+
+//new way, psuedo construction
+function teacher(name, hobby, skill) {
+  var student = {
+    name : name,
+    hobby : hobby,
+    skill : skill
+  };
+  student.skill = skill;
+  student.gettingHairCut = function(){
+    console.log('buzzzz');
+  };
+}
+
+//real constructor.  named with title case
+var Student = function (name, hobby, skill){
+  this.name = name;
+  this.hobby = hobby;
+  this.skill = skill;
+  this.haircut = function() {
+    console.log('snip snip');
+  };
+};
+
+//adding a new method outside to add to a constructor.
+Student.prototype.usePowers = function() {
+  console.log('i am good at ' + this.hobby + ' my ' + this.skill + 'is powerful.');
+};
+
+var matt = new Student(1,2,3);
+// new Student (1,2,3);
+
+
+
+
+
+
+
