@@ -109,6 +109,12 @@ for (var i = 0 ; i < storeArray.length; i++){
     var salesP = document.createElement('p');
     var salesSpan = document.createElement('span');
 
+    //TODO: add a var, combine it in the var, then just push it as a single p, and kill the span.
+    
+    // add classes
+    salesP.classList.add('hours');
+    salesSpan.classList.add('cookies');
+
     // give some text
     salesP.textContent = operationHours[j];
     salesSpan.textContent = storeArray[i].getCookiesByHour();
