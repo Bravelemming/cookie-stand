@@ -1,0 +1,46 @@
+nav p {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+nav {
+  border-left: 6px solid red;
+  background-color: thistle;
+  border-bottom: 3px solid black;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+body {
+  background-image: url(./assets/fishbackground.jpg);
+  background-repeat: repeat;
+  background-size: 100%;
+  color: khaki;
+  font-family: 'Oswald','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.1em;
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  background-color: black;
+  border-radius: 10px;
+  opacity: .75;
+}
+
+p {
+  display: inline-block;
+}
