@@ -122,6 +122,8 @@ for (var i = 0 ; i < storeArray.length; i++){
     // append child to page
     salesList.appendChild(salesP);
     salesList.appendChild(salesSpan);
+
+    //TODO: display total and output on the bottom.
   }
 
 }
