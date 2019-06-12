@@ -144,3 +144,4 @@ for(var c = 0 ; c < operationHours.length ; c ++ ){
   htmlTextHack('td', tempByHour, 'salesByHour');
 }
 //END TABLE
+
