@@ -23,7 +23,25 @@
   <main>
 
     <h1>Sales</h1>
+    <form id="storeForm">
+      <fieldset>
+        <legend>Add A New Store</legend>
 
+        <label for="location">Location</label>
+        <input name="location" type="text">
+
+        <label for="minCust">Min Customer</label>
+        <input name="minCust" type="number">
+
+        <label for="maxCust">Max Customer</label>
+        <input name="maxCust" type="number">
+
+        <label for="avgCookie">Avg Cookie</label>
+        <input name="avgCookie" type="number">
+
+        <input type="submit" value="Create A New Store">
+      </fieldset>
+    </form>
     <table id="salesByHour">
 
     </table>
