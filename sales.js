@@ -167,3 +167,4 @@ var handleFormSubmit = function(e){
 
 //adds event listener to the submit button
 form.addEventListener('submit', handleFormSubmit);
+
