@@ -53,10 +53,14 @@ main {
   background-color: black;
   border-radius: 10px;
   opacity: .75;
-  float: left;
-  width: 75%;
   margin-top: 1%;
-  min-height: 600px;
+  min-height: 400px;
+  float: left;
+  width: 100%;
+}
+
+#splash{
+  float: left;
 }
 
 .card {
@@ -79,3 +83,6 @@ main {
   padding: 2px 16px;
 }
 
+td {
+  text-align: right;
+}
