@@ -86,3 +86,21 @@ main {
 td {
   text-align: right;
 }
+
+input[type="text"], input[type="number"] {
+  overflow-x: scroll;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+input[type="submit"]  {
+  
+  white-space: nowrap;
+  display: inline-block;
+  background-color: white;
+  color: back;
+  margin: 8px;
+  padding: 8px;
+  border: 8px;
+  box-sizing: border-box;
+}
