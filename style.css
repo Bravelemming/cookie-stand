@@ -86,3 +86,18 @@ main {
 td {
   text-align: right;
 }
+
+input[type="text"], input[type="number"] {
+  overflow-x: scroll;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+input[type="submit"]  {
+  overflow-x: scroll;
+  white-space: nowrap;
+  display: inline-block;
+  background-color: white;
+  min-width:10px;
+  min-height: 10px;
+}
