@@ -94,10 +94,13 @@ input[type="text"], input[type="number"] {
 }
 
 input[type="submit"]  {
-  overflow-x: scroll;
+  
   white-space: nowrap;
   display: inline-block;
   background-color: white;
-  min-width:10px;
-  min-height: 10px;
+  color: back;
+  margin: 8px;
+  padding: 8px;
+  border: 8px;
+  box-sizing: border-box;
 }
