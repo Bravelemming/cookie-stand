@@ -132,12 +132,7 @@ htmlNodeAdd('tr', 'salesByHour');
 //totals by hour, single table data add
 htmlTextHack('td', 'Hourly Total', 'salesByHour');
 
-//total by time
-
-// iterate over each object, pick out just the [0] and add them all.  
-
-
-
+//total by time 
 //iterate over 15 hours
 for(var c = 0 ; c < operationHours.length ; c ++ ){
   //temp total holder
@@ -148,5 +143,4 @@ for(var c = 0 ; c < operationHours.length ; c ++ ){
   }
   htmlTextHack('td', tempByHour, 'salesByHour');
 }
-
 //END TABLE
