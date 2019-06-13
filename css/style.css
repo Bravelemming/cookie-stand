@@ -28,7 +28,7 @@ nav a:hover {
 }
 
 body {
-  background-image: url(./assets/fishbackground.jpg);
+  background-image: url(/assets/fishbackground.jpg);
   background-repeat: repeat;
   background-size: 100%;
   color: khaki;
@@ -54,7 +54,6 @@ main {
   border-radius: 10px;
   opacity: .75;
   margin-top: 1%;
-  min-height: 400px;
   float: left;
   width: 100%;
 }
@@ -63,8 +62,17 @@ main {
   float: left;
 }
 
+
+#cards{
+  margin: auto;
+  /* display: table; */
+  vertical-align: middle;
+
+  
+}
+
 .card {
-  float: right;
+  /* float: right; */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   width: 20%;
@@ -72,7 +80,15 @@ main {
   background-color: blanchedalmond;
   margin-top: 1%;
   border-radius: 10px;
+
+  /* display:table-cell; */
+  display: inline-block;
+
+  margin-left: 2%;
+  margin-right: 2%;
+
 }
+
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -103,4 +119,35 @@ input[type="submit"]  {
   padding: 8px;
   border: 8px;
   box-sizing: border-box;
+}
+
+.rightNav {
+  float: right;
+}
+
+.right {
+  float:right;
+}
+
+#locationList {
+  float:left;
+}
+
+#map{
+  width: 45%;
+  height: 45%;
+  float: right;
+  padding-right: 20px;
+}
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: 25px;
+  border-left: 6px solid red;
+  background-color: thistle;
+  border-bottom: 3px solid black;
+  border-radius: 10px;
+  text-align: center;
 }
