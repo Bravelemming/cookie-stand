@@ -159,7 +159,7 @@ var handleFormSubmit = function(e){
   var minCust = parseInt(e.target.minCust.value, 10);
   var maxCust = parseInt(e.target.maxCust.value, 10);
   var avgCookie = parseInt(e.target.avgCookie.value, 10);
-
+//push data primitives to our array of data.
   locationArrayData.push([location, minCust, maxCust, avgCookie]);
   document.getElementById('salesByHour').innerHTML = '';
   createTable();
